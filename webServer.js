@@ -114,7 +114,10 @@ app.post('/move_nurse', (req, res) => {
     res.sendStatus(200);
 })
 
-dbConnection.startConnection();
+app.listen(process.env.port, () => {
+    dbConnection.startConnection();
+    console.log(`This server is listening on port ${port}`);
+})
 
 // At 7 AM or 7 PM (end of shift for nurses) the CCN date for nurses in the nurseCCNdatesToUpdate array are updated to the current date
 let dateUpdateFunction = () => {
