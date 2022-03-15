@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
-    res.send('Hey! You got in touch with the server!')
+    res.send('Hey! You got in touch with the server! The server is up and working!')
 })
 
 app.get('/nurse_data', (req, res) => {
